@@ -9,9 +9,8 @@ package:
   version: ${{ version }}
 
 source:
-  # - url: https://github.com/triton-lang/triton/releases/download/v${{ version }}/triton-${{ version }}.tar.gz
-  - url: https://github.com/triton-lang/triton/archive/f797708c0626e5f9840ca5b0a98790e2c7cb09ad.tar.gz
-    sha256: 35acf558b194204a8a0d7104f989b37879627ea7a0017f1df36d309a39a17e4f
+  - url: https://github.com/triton-lang/triton/releases/download/v${{ version }}/triton-${{ version }}.tar.gz
+    sha256: 451b07863426eb7804fc8fc59ca046a3e2e7312ded97124686a5a1d15fe9521f
     patches:
       - patches/0001-Remove-Werror-that-cause-false-positive-build-failur.patch
       # uncomment if we decide to link dynamically again
