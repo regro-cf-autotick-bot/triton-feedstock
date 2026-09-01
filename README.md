@@ -47,31 +47,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `triton` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install triton
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install triton
 ```
 
-It is possible to list all of the versions of `triton` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add triton
+# for installing globally
+pixi global install triton
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `triton` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search triton --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search triton --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search triton --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -83,6 +125,8 @@ mamba repoquery whoneeds triton --channel conda-forge
 # List dependencies of `triton`:
 mamba repoquery depends triton --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
