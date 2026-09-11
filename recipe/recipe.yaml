@@ -98,6 +98,21 @@ outputs:
         - cuda-cupti
 
     tests:
+      - package_contents:
+          bin:
+            exists:
+              - proton
+              - proton-viewer
+            not_exists:
+              # make sure we don't accidentally install any LLVM files
+              - clang
+              - lld
+              - llvm-as
+              - mlir-opt
+          files:
+            not_exists:
+              - include/**
+              - lib/lib*
       - python:
           imports:
             - triton
