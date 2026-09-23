@@ -20,7 +20,7 @@ source:
       - patches/0004-Add-conda-forge-include-dirs-to-list-of-include-dirs.patch
       - patches/0005-Make-test_aot-importable-without-a-GPU-backend.patch
   - url: https://github.com/llvm/llvm-project/archive/${{ llvm_commit }}.tar.gz
-    sha256: f2ebe182b09cbff08231bd2e15618a5dbe015770b5bdcd5ec29a6170813f2387
+    sha256: c165c01a3e6c0e12f0794d387f2f3b0740e2b30ceeee10cc4d6e0adba5044ff3
     target_directory: llvm-project
 
 build:
