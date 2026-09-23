@@ -49,8 +49,13 @@ outputs:
         - zlib
         - zstd
 
+  # workaround for https://github.com/conda-forge/conda-smithy/issues/2673
   - package:
       name: triton-dummy
+
+    build:
+      # a hack to make sure this is only present while rerendering
+      skip: env.get("CONDA_BLD_PATH") != ""
 
     inherit: llvm-build
 
